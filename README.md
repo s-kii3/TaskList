@@ -1,14 +1,18 @@
-# TaskList
-タスク管理アプリケーション
+# TaskList_v2
+タスク管理アプリケーション v2
+dockerを使って環境構築するよう変更
 
 ## 起動方法
 ```
-# ビルド
-$ gradle build
+# アプリケーションのビルド
+gradle clean build
 
-# 実行
-$ java -jar build/libs/TaskList-0.0.1-SNAPSHOT.jar 
+# 起動
+docker compose up -d
 ```
 
+## URL
+http://localhost:8080/
+
 ## 参考
-https://qiita.com/monkey0001/items/ef9c51121cbae40e303b
+https://qiita.com/monkey0001/items/2e14428831e9ad7f48b4
