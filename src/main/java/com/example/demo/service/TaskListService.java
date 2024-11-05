@@ -19,10 +19,11 @@ public class TaskListService {
         return taskItemRepository.findAll();
     }
 	
-	public void add(String task, String deadLine) {
+	public TaskItem add(String task, String deadLine) {
 		String id = UUID.randomUUID().toString().substring(0, 8);
 		TaskItem item = new TaskItem(id, task, deadLine, false);
 		taskItemRepository.add(item);
+		return new TaskItem(id, task, deadLine, false);
     }
 	
 	public void delete(String id) {
