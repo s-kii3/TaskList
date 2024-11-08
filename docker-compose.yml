@@ -9,6 +9,7 @@ services:
     volumes:
       - ./mysql/init/:/docker-entrypoint-initdb.d # テーブル作成やデータの初期化をする設定
       - ./mysql/mysql.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql/data:/usr/local/var/mysql # データの保存
     environment:
       MYSQL_DATABASE: "spring_test"
       MYSQL_ROOT_USER: "root"
